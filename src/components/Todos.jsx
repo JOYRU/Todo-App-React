@@ -1,5 +1,6 @@
 import React from 'react'
 import Todo from './Todo';
+import style from './todos.module.css'
 
 
 // const Todos = (props) =>{
@@ -22,17 +23,19 @@ import Todo from './Todo';
 export default function Todos(props) {
     // console.log(props.todos)
     return (
-     <section>
-        Todos
-     
+     <section >
+       <div className={style.todos} >
+
+       
         
 
       {  props.todos.map(
                  (todo) =>    
-                  <Todo todo={todo} key={todo.id} /> 
+                  <Todo todo={todo.todo} key={todo.id} /> 
                  
             )
       }
+      </div>
      </section>
     ) ; 
   }
